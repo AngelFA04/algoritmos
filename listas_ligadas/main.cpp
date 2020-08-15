@@ -19,7 +19,7 @@ int main(){
     //Crear lista ligada
     ListaLigada ll;
 
-    while(option != 5){
+    while(option  != 5 ){
         switch (option)
         {
         case 1:
@@ -27,9 +27,17 @@ int main(){
             int value;
             cout << "Introduce el valor para enlistar en la lista\n";
             cin >> value;
-            Nodo *node = ll.creaNodo(0, value);
+            int lastId;
+            if(ll.sizeLista == 0){
+                lastId = 0;
+            }
+            else
+            {
+                lastId = ll.fin->id + 1;
+            }
+            
 
-            ll.enLista(node);
+            ll.enLista(ll.creaNodo(lastId++, value) );
             
             break;
         case 2:
@@ -40,11 +48,23 @@ int main(){
             break;
         case 4:
             /* Imprimir */
+            cout << "\n";
             ll.imprimeLista();
+            cout << "\n";
             break;
         default:
             cout << "Esta opción no existe";
             break;
         }
+            cout << "Menu de opciones" << "\n";
+            cout << "1. Insertar\n";
+            cout << "2. Buscar\n";
+            cout << "3. Borrar\n";
+            cout << "4. Imprimir\n";
+            cout << "5. Salir\n";
+
+            cout << "Introduce la opción:\n";
+            cin >> option;
+
     }
 }

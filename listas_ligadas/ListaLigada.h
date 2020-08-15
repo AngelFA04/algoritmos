@@ -10,10 +10,10 @@ struct Nodo{
 class ListaLigada {
     private:
         Nodo *inicio;
-        Nodo *fin;
-        int sizeLista;
     public:
         ListaLigada();
+        int sizeLista;
+        Nodo *fin;
         virtual ~ListaLigada();
         void enLista(Nodo *n);
         void insertaEn(Nodo *n, int pos);
