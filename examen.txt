@@ -1,5 +1,5 @@
 ✔1. Menu de listas ligadas
-✔2. Arboles binarios
+2. Arboles binarios
 	Hacer menu con las mismas opciones que en anterior.
 	Mostrar 3 opciones de impresiones.
 
