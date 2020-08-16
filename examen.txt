@@ -1,17 +1,18 @@
-2. Arboles binarios
+✔1. Menu de listas ligadas
+✔2. Arboles binarios
 	Hacer menu con las mismas opciones que en anterior.
 	Mostrar 3 opciones de impresiones.
 
-3. Ordenamiento
+✔3. Ordenamiento
 	Pedir números desde teclado y detener cuando reciba -1.
 	Usar alguno de los metodos de ordenamiento imprimir en pantalla lista
 	ordenada de menor a mayor y de mayor a menor.
 
 4.1 a) Dejar que el usuario construya grafo desde el teclado. Definir cuantos nodos son y conexiones
-   b) Mostrar arbol de expansión mínima del grafo creado.
+	b) Mostrar arbol de expansión mínima del grafo creado.
 
 4.2 a) Pedir nombre de una persona
-    b) Mostrar a cual nombre de pequeña BD se parece más 
+	b) Mostrar a cual nombre de pequeña BD se parece más 
 
 5.  a) Modificar Algoritmo de Djistra para usar  colas de prioridad.
 

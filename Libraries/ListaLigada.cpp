@@ -101,6 +101,19 @@ void ListaLigada::imprimeLista(){
     cout << "FIN" << endl;
 }
 
+
 int ListaLigada::obtenTamanio(){
     return sizeLista;
+}
+
+void ListaLigada::agregar(int n){
+    int lastId;
+    if(sizeLista == 0){
+        lastId = 0;
+    }
+    else{
+        lastId = fin->id;
+        lastId++;
+    }
+    enLista(creaNodo(lastId, n));
 }

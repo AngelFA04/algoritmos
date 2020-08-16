@@ -9,12 +9,13 @@ struct Nodo{
 
 class ListaLigada {
     private:
-        Nodo *inicio;
     public:
         ListaLigada();
+        Nodo *inicio;
         int sizeLista;
         Nodo *fin;
         virtual ~ListaLigada();
+        void agregar(int n);
         void enLista(Nodo *n);
         void insertaEn(Nodo *n, int pos);
         Nodo *desEnlista();

@@ -37,7 +37,7 @@ int main(){
             }
             
 
-            ll.enLista(ll.creaNodo(lastId++, value) );
+            ll.enLista(ll.creaNodo(lastId, value) );
             
             break;
         case 2:
