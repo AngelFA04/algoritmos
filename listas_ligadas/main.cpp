@@ -45,24 +45,27 @@ int main(){
             break;
         case 3:
             /* Buscar - Luis */
-                aux=primero;
-int ok = 0, numeroABuscar = 50;
+                int value;
+                cout << "Introduce el valor para enlistar en la lista\n";
+                cin >> value;
+                aux=inicio;
+                bool existe =  FALSE, 
 
-while(aux != NULL && !ok)
-{
-    if (aux->dato == numeroABuscar) {
-        ok = 1;
-    } else {
-        aux=aux->siguiente;
-    }
-}
-if(ok)
-{
-    printf("\n\n Numero %d esta en la lista", numeroABuscar);
-}
-else
-{
-    printf("\n\n El numero %d no esta en la lista", numeroABuscar);
+                while(aux != NULL )
+                {
+                    if (aux->dato == value) {
+                        existe = TRUE;
+                    } else {
+                        aux=aux->siguiente;
+                    }
+                }
+                if( existe = TRUE)
+                {
+                    cout<<"El número ",value," está en la lista");
+                }
+                else
+                {
+                    cout<<("El numero  no está en la lista");
 }
             break;
         case 4:
