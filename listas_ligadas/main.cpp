@@ -45,6 +45,25 @@ int main(){
             break;
         case 3:
             /* Buscar - Luis */
+                aux=primero;
+int ok = 0, numeroABuscar = 50;
+
+while(aux != NULL && !ok)
+{
+    if (aux->dato == numeroABuscar) {
+        ok = 1;
+    } else {
+        aux=aux->siguiente;
+    }
+}
+if(ok)
+{
+    printf("\n\n Numero %d esta en la lista", numeroABuscar);
+}
+else
+{
+    printf("\n\n El numero %d no esta en la lista", numeroABuscar);
+}
             break;
         case 4:
             /* Imprimir */
