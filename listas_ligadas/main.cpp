@@ -42,11 +42,21 @@ int main(){
             break;
         case 2:
             /* Borrar - Luis*/
+            int value;
+            cout << "Introduce la posición del valor para remover de la lista\n";
+            cin >> value;
+            if(ll.sizeLista == 0){
+                cout>>"No hay elementos en la lista";
+                
+            }
+            else
+            {
+                ll.enLista(ll.removerDe(value) /* ?
             break;
         case 3:
             /* Buscar - Luis */
                 int value;
-                cout << "Introduce el valor para enlistar en la lista\n";
+                cout << "Introduce el valor para buscar en la lista";
                 cin >> value;
                 aux=inicio;
                 bool existe =  FALSE, 
@@ -68,6 +78,7 @@ int main(){
                     cout<<("El numero  no está en la lista");
 }
             break;
+                
         case 4:
             /* Imprimir */
             cout << "\n";
