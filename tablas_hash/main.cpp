@@ -10,83 +10,82 @@ int main()
     string nombre, email, numero;
     TablaHash th;
 
-    do {
-        //system("cls");
 
-        cout << "\nMenu de Opciones" << endl;
+
+        cout << "Menu de Opciones" << \n;
         cout << "1. Insertar" << endl;
         cout << "2. Buscar" << endl;
         cout << "3. Actualizar "<< endl;
         cout << "4. Borrar" << endl;
         cout << "5. Imprimir" << endl;
-        cout << "6. SALIR" << endl;
+        cout << "6. Salir" << endl;
+        
+        int option 
+        cout << "Introduce la opción que quieras realizar: ";
+        cin >> option;
 
-        cout << "\nIngrese una opcion: ";
-        cin >> opcion;
-
-        switch (opcion) {
-            case 1://INSERTAR
-                cout << "\nEscribe el nombre: ";
-                cin.ignore();
-                getline(cin,nombre);
-                cout << "\nEscribe el numero: ";
-                //cin.ignore();
+        while(option  != 5 ){
+        switch (option)
+        {
+            //Insertar 
+            case 1:
+                cout << "Escribe el nombre que deseas insertar: \n";
+                cin>>nombre
+                
+                cout << "Escribe un numero que deseas insertar: \n";
+                
                 cin >> numero;
-                //getline(cin,numero);
-                cout << "\nEscribe el correo: ";
-                cin.ignore();
-                //getline(cin,email);
+                
+                cout << "Escribe el correo que deseas insertar: \n";
+     
+                
                 cin >> email;
                 th.insertar(nombre, numero, email);
-                cout<<"\n\tInsertado exitosamente!"<<endl;
+                cout<<"La información ha sido insertada\n"<<endl;
                 break;
-
-            case 2: //BUSCAR
-                cout << "\nEscribe el nombre de la persona que quieres buscar: ";
-                cin.ignore();
-                getline(cin,nombre);
+                
+            //Buscar
+            case 2: 
+                cout << "Escribe el nombre de la persona que quieres buscar: \n";
+                cin >> nombre;
                 if(th.buscar(nombre)==-1){
-                    cout << "\nEse nombre no existe"<<endl;
+                    cout << "Ese nombre está registrado\n"<<endl;
                 }
                 break;
-
-            case 3: //ACTUALIZAR
-                cout << "\nEscribe el nombre de la persona que quieres actualizar: ";
-                cin.ignore();
-                getline(cin,nombre);
+            //Actualizar
+            case 3: 
+                cout << "Escribe el nombre de la persona que quieres actualizar: \n";
+                
+              cin >> nombre;
                 if(th.buscar(nombre)==-1){
-                    cout << "\nEse nombre no existe"<<endl;
+                    cout << "Ese nombre no está registrado \n"<<endl;
                 }else{
-                    cout << "\nEscribe el numero: ";
+                    cout << "Escribe el nuevo número: \n";
                     cin >> numero;
-                    cout << "\nEscribe el correo: ";
-                    cin.ignore();
+                    cout << "Escribe el correo: \n";
                     cin >> email;
                     th.actualizar(nombre, numero, email, true);
-                    cout << "\n\tActualizacion exitosa!"<<endl;
+                    cout << "La base de datos ha sido actualizada"<<endl;
                 }
 
                 break;
-            case 4://BORRAR
+            //Borrar
+            case 4:
 
-                cout << "\nEscribe el nombre de la persona que quieres borrar: ";
-                cin.ignore();
-                getline(cin,nombre);
+                cout << "Escribe el nombre de la persona que quieres eliminar: \n";
+               cin >> nombre ;
                 if(th.buscar(nombre)==-1){
-                    cout << "\nEse nombre no existe"<<endl;
+                    cout << "El nombre no está registrado \n"<<endl;
                 }else{
                     th.eliminar(nombre);
-                    cout<<"\n\tEliminado con exito!" << endl;
+                    cout<<"Eliminado con exito! \n" << endl;
                 }
 
                 break;
 
             case 5://Imprimir
-                cout<<endl;
                 th.imprimirTabla();
                 break;
         }
 
-    } while (opcion != 6);
-
-    return 0;
+   
