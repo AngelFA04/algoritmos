@@ -46,8 +46,11 @@ int main()
         case 2: 
             cout << "Escribe el nombre de la persona que quieres buscar: \n";
             cin >> nombre;
-            if(th.buscar(nombre)==-1){
+            if(th.buscar(nombre)!=-1){
                 cout << "Ese nombre está registrado\n"<<endl;
+            }
+            else{
+                cout << "El nombre no está registrado\n";
             }
             break;
 

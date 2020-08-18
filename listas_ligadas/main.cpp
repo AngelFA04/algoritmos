@@ -1,4 +1,4 @@
-#include "./ListaLigada.h"
+#include "../Libraries/ListaLigada.h"
 #include <iostream>
 
 using namespace std;
@@ -15,6 +15,7 @@ int main(){
     int option;
     cout << "Introduce la opción:\n";
     cin >> option;
+    int value;
 
     //Crear lista ligada
     ListaLigada ll;
@@ -24,7 +25,6 @@ int main(){
         {
         case 1:
             /* Insertar - Angel */
-            int value;
             cout << "Introduce el valor para enlistar en la lista\n";
             cin >> value;
             int lastId;
@@ -40,43 +40,48 @@ int main(){
             ll.enLista(ll.creaNodo(lastId, value) );
             
             break;
+
+        
         case 2:
-            /* Borrar - Luis*/
-            int value;
-            cout << "Introduce la posición del valor para remover de la lista\n";
-            cin >> value;
-            if(ll.sizeLista == 0){
-                cout>>"No hay elementos en la lista";
-                
-            }
-            else
-            {
-                ll.enLista(ll.removerDe(value) /* ?
-            break;
-        case 3:
             /* Buscar - Luis */
-                int value;
-                cout << "Introduce el valor para buscar en la lista";
+                
+                cout << "Introduce el valor para buscar en la lista: ";
                 cin >> value;
-                aux=inicio;
-                bool existe =  FALSE, 
+                Nodo *aux;  
+                aux = ll.inicio;
+                bool existe;
+                existe = false;
 
                 while(aux != NULL )
                 {
-                    if (aux->dato == value) {
-                        existe = TRUE;
+                    if (aux->valor == value) {
+                        existe = true;
+                        break;
                     } else {
                         aux=aux->siguiente;
                     }
                 }
-                if( existe = TRUE)
+                if( existe == true)
                 {
-                    cout<<"El número ",value," está en la lista");
+                    cout<<"El número "<<value<<" está en la lista";
                 }
                 else
                 {
-                    cout<<("El numero  no está en la lista");
-}
+                    cout<<"El numero  no está en la lista";
+                }
+            break;
+        case 3:
+            /* Borrar - Luis*/
+            int pos_remove;
+            cout << "Introduce la posición del valor para remover de la lista\n";
+            cin >> pos_remove;
+            if(ll.sizeLista == 0){
+                cout << "No hay elementos en la lista";
+            }
+            else
+            {
+                ll.removerDe(pos_remove);
+            } /* ?*/
             break;
                 
         case 4:
@@ -88,6 +93,7 @@ int main(){
         default:
             cout << "Esta opción no existe";
             break;
+        
         }
             cout << "Menu de opciones" << "\n";
             cout << "1. Insertar\n";
