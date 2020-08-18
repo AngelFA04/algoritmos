@@ -22,6 +22,23 @@ void TablaHash::imprimirTabla(){
     }
 }
 
+void TablaHash::imprimir(){
+    cout << "-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~\n";
+    cout << "Pos |\t Nombre |\t Número |\t Correo |\n";
+    cout << "-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~\n";
+    for(int i = 0; i < 1024; i++){
+        if(tabla[i] != NULL){
+            for(Nodo *temp = tabla[i]; temp!=NULL; temp=temp->siguiente){
+                cout <<i << "\t";
+                cout <<temp->nombre << "\t";
+                cout <<temp->numero << "\t";
+                cout <<temp->email << "\n";
+                 cout << "-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~\n";
+            }
+        }
+    }
+}
+
 
 void TablaHash::insertar(string nombre, string numero, string email){
     int pos = obtenerCodigoHash(nombre);

@@ -21,6 +21,7 @@ class TablaHash {
         int obtenTamanio();
         void imprimirTabla();
         void imprimirNodo();
+        void imprimir();
     private:
         int tam;
         Nodo *tabla[1024];
