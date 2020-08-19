@@ -9,7 +9,7 @@ int main() {
     bool correcto = true;
     bool correcto2 = true;
 
-    cout << "Escribe el numero de nodos: ";
+    cout << "Escribe el numero de nodos de tu grafo: ";
     cin >> nNodos;
     int matrizAdjT[nNodos][nNodos];
 
@@ -32,7 +32,7 @@ int main() {
     }
     cout<<"\n";
     do{
-    cout<<"1. SI\n2. NO\n¿Es correcta la matriz? ";
+    cout<<"1. SI\n2. NO\nÂ¿Es correcta la matriz? ";
     cin >> respuesta;
     cout<<"\n";
     if(respuesta == 1 ){
