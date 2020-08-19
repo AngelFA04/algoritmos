@@ -8,14 +8,15 @@ int main() {
     int **matrizAdj;
     bool correcto = true;
     bool correcto2 = true;
-
+    
+    //Empezamos a definir el grafo, comenzando por el número de nodos
     cout << "Escribe el numero de nodos de tu grafo: ";
-    cin >> nNodos;
+    cin >> numNodos;
     int matrizAdjT[nNodos][nNodos];
 
     while(correcto){
-    for(int i=0; i<nNodos; i++){
-        for(int x=0; x<nNodos; x++){
+    for(int i=0; i<numNodos; i++){
+        for(int x=0; x<numNodos; x++){
             cout<<"Dijite el numero[" << i+1 << "][" << x+1 <<"]";
             cin >> matrizAdjT[i][x];
 
@@ -23,8 +24,8 @@ int main() {
     }
     cout<<"\n";
     cout<<"La matriz almacenada"<<endl;
-      for(int i=0; i<nNodos; i++){
-        for(int x=0; x<nNodos; x++){
+      for(int i=0; i<numNodos; i++){
+        for(int x=0; x<numNodos; x++){
             cout << matrizAdjT[i][x] <<" ";
 
         }
@@ -49,17 +50,17 @@ int main() {
     }while(correcto);
 
 
-    matrizAdj = new int*[nNodos];
-    for(int i = 0; i < nNodos; i++){
-        matrizAdj[i] = new int[nNodos];
+    matrizAdj = new int*[numNodos];
+    for(int i = 0; i < numNodos; i++){
+        matrizAdj[i] = new int[numNodos];
     }
-    for(int i = 0; i < nNodos; i++){
-        for(int j = 0; j < nNodos; j++){
+    for(int i = 0; i < numNodos; i++){
+        for(int j = 0; j < numNodos; j++){
             matrizAdj[i][j] = matrizAdjT[i][j];
         }
     }
-    Dijkstra d(nNodos, matrizAdj);
-    for(int i = 0; i < nNodos; i++){
+    Dijkstra d(numNodos, matrizAdj);
+    for(int i = 0; i < numNodos; i++){
         d.calcularDC(i);
     }
     return 0;
