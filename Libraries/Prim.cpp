@@ -11,6 +11,8 @@ Prim::Prim(int numeroNodos, int **matrizAdj){
     visitados = new bool[numeroNodos];
 }
 
+
+
 void Prim::inicializarValores(){
     for(int i = 0; i < numeroNodos; i++){
         arbol[i] = -1;

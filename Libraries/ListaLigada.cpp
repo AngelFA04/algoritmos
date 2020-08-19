@@ -9,7 +9,7 @@ ListaLigada::ListaLigada() {
 }
 
 ListaLigada::~ListaLigada() {
-
+    
 }
 
 Nodo *ListaLigada::creaNodo(int id, int valor){

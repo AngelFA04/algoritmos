@@ -5,6 +5,7 @@
 class Prim {
     public:
         Prim(int numeroNodos, int **matrizAdj);
+        
         void calcularAEM();
     private:
         int numeroNodos;

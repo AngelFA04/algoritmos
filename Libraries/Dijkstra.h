@@ -5,6 +5,7 @@
 class Dijkstra {
     public:
         Dijkstra(int numeroNodos, int **matrizAdj);
+        //virtual ~Dijkstra();
         void calcularDC(int scr);
     private:
         int numeroNodos;

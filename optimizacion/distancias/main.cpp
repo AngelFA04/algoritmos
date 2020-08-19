@@ -14,21 +14,23 @@ int main(int argc, char const *argv[])
     cin >> name;
     int distance;
     int min = 100;
+    float percentage;
+    float name_len;
     string similar_name;
     // Comparar nombre de usario con nombres en Base de Datos
     for (int i = 0; i < 20; i++)
     {   
         distance = lev.calcularDistancia(name, names[i]);
-        cout << "Distancias entre: " << name << " - " <<names[i] << " : " << distance << endl;
+        name_len = names[i].length();
+        //cout << "Distancias entre: " << name << " - " <<names[i] << " : " << distance << endl;
         if(distance <= min){
             min = distance;
             similar_name = names[i];
+          //  cout << "Name len " << name_len;
+            percentage =  (name_len -  distance) / name_len;
         }
     }
-    cout << "El nombre más similar es: " << similar_name << endl; 
-
-    //int dis = lev.calcularDistancia(string1, string2);
-    //cout << dis;
+    cout << "El nombre más similar es: " << similar_name << " en un " << percentage << endl; 
 
     return 0;
 }

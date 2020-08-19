@@ -12,6 +12,10 @@ Dijkstra::Dijkstra(int numeroNodos, int **matrizAdj){
     padres = new int[numeroNodos];
 }
 
+// Dijkstra::~Dijkstra() {
+    
+// }
+
 void Dijkstra::imprimirCamino(int j) {
     if (padres[j] == - 1){
         return;
