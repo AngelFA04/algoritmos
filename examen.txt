@@ -11,10 +11,10 @@
 4.1 a) Dejar que el usuario construya grafo desde el teclado. Definir cuantos nodos son y conexiones
 	b) Mostrar arbol de expansión mínima del grafo creado.
 
- 4.2 a) Pedir nombre de una persona
+✔ 4.2 a) Pedir nombre de una persona
 	b) Mostrar a cual nombre de pequeña BD se parece más 
 
 5.  a) Modificar Algoritmo de Djistra para usar  colas de prioridad.
 
-6.  a) Menu con opciones de Tabla Hash (Insertar, Modificar, Buscar, Borrar, Imprimir)
+✔6.  a) Menu con opciones de Tabla Hash (Insertar, Modificar, Buscar, Borrar, Imprimir)
 
